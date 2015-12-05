@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("LSGCL")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A library of my Code")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Hewlett-Packard")]
-[assembly: AssemblyProduct("LSGCL")]
-[assembly: AssemblyCopyright("Copyright © Hewlett-Packard 2015")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Lukas Stoop General Code Library")]
+[assembly: AssemblyCopyright("Copyright © Lukas Stoop 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

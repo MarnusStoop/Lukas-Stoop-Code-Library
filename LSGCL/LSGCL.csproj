@@ -69,6 +69,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Heap.cs" />
+    <Compile Include="Maths\Factorial.cs" />
+    <Compile Include="Maths\Financial.cs" />
+    <Compile Include="Maths\Sequences.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

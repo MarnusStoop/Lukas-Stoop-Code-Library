@@ -2,9 +2,12 @@
 
 namespace LSGCL.Maths
 {
-    public class Financial
+    /// <summary>
+    /// A static class for financial computations
+    /// </summary>
+    public static class Financial
     {
-        public static double SimpleInterest(double amount,double rate,double time)
+        public static double SimpleInterest(double amount, double rate, double time)
         {
             double interestEarned = 0;
 
@@ -26,7 +29,7 @@ namespace LSGCL.Maths
         {
             double reducedAmount = 0;
 
-            reducedAmount = amount * (1- ((rate / 100) * time));
+            reducedAmount = amount * (1 - ((rate / 100) * time));
 
             return reducedAmount;
         }
@@ -40,7 +43,7 @@ namespace LSGCL.Maths
             return reducedAmount;
         }
 
-        public static double NominalToEffective(double nominalRate,double time, double period)
+        public static double NominalToEffective(double nominalRate, double time, double period)
         {
             double rate = 0;
 
@@ -49,11 +52,11 @@ namespace LSGCL.Maths
             return rate;
         }
 
-        public static double EffectiveToNominal(double effectiveRate,double time,double period)
+        public static double EffectiveToNominal(double effectiveRate, double time, double period)
         {
             double rate = 0;
 
-            rate = period * (Math.Pow(1 + (effectiveRate / 100),1 / period) - 1);
+            rate = period * (Math.Pow(1 + (effectiveRate / 100), 1 / period) - 1);
 
             return rate;
         }

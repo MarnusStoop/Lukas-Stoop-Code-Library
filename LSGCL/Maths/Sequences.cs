@@ -2,9 +2,12 @@
 
 namespace LSGCL.Maths
 {
-    public class Sequences
+    /// <summary>
+    /// A static class for sequencial computations
+    /// </summary>
+    public static class Sequences
     {
-        public static double CalculateArithmeticTerm(double difference,double firstTerm,int termToFind)
+        public static double CalculateArithmeticTerm(double difference, double firstTerm, int termToFind)
         {
             double sum = 0;
 
@@ -13,7 +16,7 @@ namespace LSGCL.Maths
             return sum;
         }
 
-        public static double CalculateGeometricTerm(double ratio,double firstTerm,int termToFind)
+        public static double CalculateGeometricTerm(double ratio, double firstTerm, int termToFind)
         {
             double sum = 0;
 
@@ -28,7 +31,7 @@ namespace LSGCL.Maths
             seriesLength++;
             int nLength = seriesLength - startTermNumber;
 
-            if (startTermNumber > 1)
+            if(startTermNumber > 1)
             {
                 seriesLength--;
                 nLength = seriesLength;
@@ -38,7 +41,7 @@ namespace LSGCL.Maths
                 return sum;
             }
 
-            sum = (nLength / 2) * ((2 * firstTerm) + ((nLength - 1)* difference));
+            sum = (nLength / 2) * ((2 * firstTerm) + ((nLength - 1) * difference));
 
             return sum;
         }
@@ -49,13 +52,13 @@ namespace LSGCL.Maths
             seriesLength++;
             int nLength = seriesLength - startTermNumber;
 
-            if (ratio == 1)
+            if(ratio == 1)
             {
                 Exception ratiois1 = new Exception("The ratio is not allowed to equal 1");
                 throw ratiois1;
             }
 
-            if (startTermNumber > 1)
+            if(startTermNumber > 1)
             {
                 seriesLength--;
                 nLength = seriesLength;
@@ -65,7 +68,7 @@ namespace LSGCL.Maths
                 return sum;
             }
 
-            sum = firstTerm * ((1- Math.Pow(ratio,nLength)) / (1 - ratio));
+            sum = firstTerm * ((1 - Math.Pow(ratio, nLength)) / (1 - ratio));
 
             return sum;
         }

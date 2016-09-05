@@ -4,7 +4,10 @@ using System.IO;
 
 namespace LSGCL.DataHandlers
 {
-    public class FileHandler
+    /// <summary>
+    /// A static class for accessing files
+    /// </summary>
+    public static class FileHandler
     {
 
         /// <summary>
@@ -17,16 +20,16 @@ namespace LSGCL.DataHandlers
             List<string> holder = new List<string>();
             FileStream streamFile;
             StreamReader reader;
-            if (File.Exists(filePath))
+            if(File.Exists(filePath))
             {
                 streamFile = new FileStream(filePath, FileMode.Open, FileAccess.Read);
             } else
             {
-                throw new Exception(string.Format("File not Found. File requested = {0}",filePath));
+                throw new Exception(string.Format("File not Found. File requested = {0}", filePath));
             }
             reader = new StreamReader(streamFile);
             string line = "";
-            while ((line = reader.ReadLine()) != null)
+            while((line = reader.ReadLine()) != null)
             {
                 holder.Add(line);
             }
@@ -40,7 +43,7 @@ namespace LSGCL.DataHandlers
         /// </summary>
         /// <param name="data">String to write to the file</param>
         /// <param name="filePath">Path to the file</param>
-        public static void Write(string data,string filePath)
+        public static void Write(string data, string filePath)
         {
             FileStream streamFile = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Write);
             StreamWriter writer = new StreamWriter(streamFile);
@@ -54,11 +57,11 @@ namespace LSGCL.DataHandlers
         /// </summary>
         /// <param name="data">The string array</param>
         /// <param name="filePath">Path to the file</param>
-        public static void Write(string[] data,string filePath)
+        public static void Write(string[] data, string filePath)
         {
             FileStream streamFile = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Write);
             StreamWriter writer = new StreamWriter(streamFile);
-            foreach (string line in data)
+            foreach(string line in data)
             {
                 writer.WriteLine(line);
             }
@@ -75,7 +78,7 @@ namespace LSGCL.DataHandlers
         {
             FileStream streamFile = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Write);
             StreamWriter writer = new StreamWriter(streamFile);
-            foreach (string line in data)
+            foreach(string line in data)
             {
                 writer.WriteLine(line);
             }
@@ -106,7 +109,7 @@ namespace LSGCL.DataHandlers
         {
             FileStream streamFile = new FileStream(filePath, FileMode.Append, FileAccess.Write);
             StreamWriter writer = new StreamWriter(streamFile);
-            foreach (string line in data)
+            foreach(string line in data)
             {
                 writer.WriteLine(line);
             }
@@ -123,7 +126,7 @@ namespace LSGCL.DataHandlers
         {
             FileStream streamFile = new FileStream(filePath, FileMode.Append, FileAccess.Write);
             StreamWriter writer = new StreamWriter(streamFile);
-            foreach (string line in data)
+            foreach(string line in data)
             {
                 writer.WriteLine(line);
             }

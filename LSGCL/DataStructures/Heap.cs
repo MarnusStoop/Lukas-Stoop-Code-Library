@@ -1,7 +1,11 @@
 ﻿using System;
 
-namespace LSGCL
+namespace LSGCL.DataStructures
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class Heap<T> where T : IHeapItem<T>
     {
         T[] items;
@@ -50,24 +54,24 @@ namespace LSGCL
 
         void SortDown(T item)
         {
-            while (true)
+            while(true)
             {
                 int childIndexLeft = item.HeapIndex * 2 + 1;
                 int childIndexRight = item.HeapIndex * 2 + 2;
                 int swapIndex = 0;
 
-                if (childIndexLeft < currentItemCount)
+                if(childIndexLeft < currentItemCount)
                 {
                     swapIndex = childIndexLeft;
-                    if (childIndexRight < currentItemCount)
+                    if(childIndexRight < currentItemCount)
                     {
-                        if (items[childIndexLeft].CompareTo(items[childIndexRight]) < 0)
+                        if(items[childIndexLeft].CompareTo(items[childIndexRight]) < 0)
                         {
                             swapIndex = childIndexRight;
                         }
                     }
 
-                    if (item.CompareTo(items[swapIndex]) < 0)
+                    if(item.CompareTo(items[swapIndex]) < 0)
                     {
                         Swap(item, items[swapIndex]);
                     } else
@@ -84,10 +88,10 @@ namespace LSGCL
         void SortUp(T item)
         {
             int parentIndex = (int)((item.HeapIndex - 1) / 2);
-            while (true)
+            while(true)
             {
                 T parentItem = items[parentIndex];
-                if (item.CompareTo(parentItem) > 0)
+                if(item.CompareTo(parentItem) > 0)
                 {
                     Swap(item, parentItem);
                 } else

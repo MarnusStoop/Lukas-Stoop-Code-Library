@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSGCL", "LSGCL\LSGCL.csproj", "{5BCC0BD3-7BD6-421F-84EB-F6820A37FB1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryTester", "LibraryTester\LibraryTester.csproj", "{81941AE1-CE25-44C4-AF71-9776AF5E604F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,12 @@ Global
 		{5BCC0BD3-7BD6-421F-84EB-F6820A37FB1B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5BCC0BD3-7BD6-421F-84EB-F6820A37FB1B}.Release|x86.ActiveCfg = Release|x86
 		{5BCC0BD3-7BD6-421F-84EB-F6820A37FB1B}.Release|x86.Build.0 = Release|x86
+		{81941AE1-CE25-44C4-AF71-9776AF5E604F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81941AE1-CE25-44C4-AF71-9776AF5E604F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81941AE1-CE25-44C4-AF71-9776AF5E604F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{81941AE1-CE25-44C4-AF71-9776AF5E604F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81941AE1-CE25-44C4-AF71-9776AF5E604F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81941AE1-CE25-44C4-AF71-9776AF5E604F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

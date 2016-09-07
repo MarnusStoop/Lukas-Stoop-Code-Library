@@ -76,6 +76,7 @@
     <Compile Include="Maths\Factorial.cs" />
     <Compile Include="Maths\Financial.cs" />
     <Compile Include="Maths\Sequences.cs" />
+    <Compile Include="Misc\csvFileHandler.cs" />
     <Compile Include="Misc\iniFileHandler.cs" />
     <Compile Include="Misc\Util.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

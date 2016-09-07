@@ -14,38 +14,6 @@ namespace LibraryTester.Tests
         {
             bool isRight = TestFileExtensionGetter("settings.ini", "ini");
             Console.WriteLine(isRight.ToString());
-
-            return;
-            //string[] paths = { "" };
-            //string[] extensionsExpected = { "" };
-
-            //List<bool> results = new List<bool>();
-
-            //for(int i = 0;i < paths.Length;i++)
-            //{
-            //    string currentPath = paths[i];
-            //    string currentExtension = extensionsExpected[i];
-
-            //    bool result = TestFileExtensionGetter(currentPath, currentExtension);
-
-            //    results.Add(result);
-            //}
-
-            //DisplayResults(results, extensionsExpected);
-
-        }
-
-        private static void DisplayResults(List<bool> results, string[] extensionsExpected)
-        {
-            for(int i = 0;i < results.Count;i++)
-            {
-
-            }
-        }
-
-        private static string FormatResult(bool result, string extensionExpected)
-        {
-            return string.Format("");
         }
 
         private static bool TestFileExtensionGetter(string path, string extensionExpected)
